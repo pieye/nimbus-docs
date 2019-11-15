@@ -41,8 +41,8 @@ release = ''
 #import rinoh.paper
 #rinoh_paper_size = rinoh.paper.A4
 
-extensions = ['rinoh.frontend.sphinx'
-]
+#extensions = ['rinoh.frontend.sphinx'
+#]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
