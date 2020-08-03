@@ -2,7 +2,7 @@
 Quickstart
 ==========
 
-In general there are two ways to work with nimbus:
+In general there are two ways to work with nimbus which are discussed in the following chapters:
 
 1. Working directly on the Raspberry Pi (embedded)
 2. Working on a desktop machine or edge computing hardware connected to a Raspberry Pi over the network
@@ -27,7 +27,7 @@ So you have direct low-level access to the point cloud in C. The ROS (Robot Oper
    :scale: 100 %
    :alt: Nimbus processing topology
 
-  
+ You can use the prepared `Raspberry Pi OS (buster) <https://cloud.pieye.org/index.php/s/XjcEaAw9keRf79S>`_ images with the already installed nimbus software.
 
 nimbus-web
 ----------
