@@ -105,6 +105,16 @@ In case you want to adjust the auto exposure we provide the following interface:
     m_params.exposure_mode = exposure_mode; //MANUAL = 0, MANUAL_HDR  = 1, AUTO = 2, AUTO_HDR = 3
     bool set_exposure = nimbus_autoexposure_set_params(&m_params);
 
+Furthermore the following functions are available to get the pointcloud data.
+
+.. code-block:: c
+
+    uint16_t* nimbus_seq_get_radial_dist(void* image);
+    int16_t* nimbus_seq_get_x(void* image);
+    int16_t* nimbus_seq_get_y(void* image);
+    int16_t* nimbus_seq_get_z(void* image);
+
+
 
 We assume that the previous snipped is stored in a file called main.cpp.
 You can than build this file with gcc main.cpp -o myApp -lnimbus-preprocessing and run it ./myApp.
