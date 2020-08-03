@@ -6,8 +6,7 @@
 Welcome to Nimbus's documentation!
 ==================================
 
-Nimbus is a 3D-TOF raspberry PI camera frontend and an open source software platform allowing to capture and 
-calcualte 3D point-clouds based on raw TOF data.
+Nimbus is a 3D-TOF Raspberry Pi camera frontend and an open source software platform allowing to capture and calcualte 3D point-clouds based on raw TOF data.
 
 .. Attention:: The nimbus software platform is licensed under GPLv3 or later (see accompanying file COPYING). If this doesn't fit your needs, contact us at info (at) pieye.org to obtain a different license.
 
