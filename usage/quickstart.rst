@@ -27,7 +27,7 @@ So you have direct low-level access to the point cloud in C. The ROS (Robot Oper
    :scale: 100 %
    :alt: Nimbus processing topology
 
- You can use the prepared `Raspberry Pi OS (buster) <https://cloud.pieye.org/index.php/s/XjcEaAw9keRf79S>`_ images with the already installed nimbus software.
+You can use the prepared `Raspberry Pi OS (buster) <https://cloud.pieye.org/index.php/s/XjcEaAw9keRf79S>`_ images with the already installed nimbus software.
 
 nimbus-web
 ----------
