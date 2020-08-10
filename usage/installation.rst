@@ -21,6 +21,7 @@ To use it, the corresponding embedded sources must be installed.
     sudo rpi-update
 
 2. Add the Nimbus 3D apt repository
+
 .. code-block:: shell
 
     echo 'deb http://apt.pieye.org/debian/ nimbus-stable main' | sudo tee -a /etc/apt/sources.list
@@ -30,11 +31,13 @@ To use it, the corresponding embedded sources must be installed.
     sudo apt update
 
 3. Add the Imager to your boot config
+
 .. code-block:: shell
 
     sudo echo 'dtoverlay=irs1125' | sudo tee -a /boot/config.txt
 
 4. Install the nimbus-server or libnimbus-dev
+
 .. code-block:: shell
 
     sudo apt-get install nimbus-server
@@ -42,6 +45,7 @@ To use it, the corresponding embedded sources must be installed.
     sudo apt-get install libnimbus-dev
 
 4. Reboot the Raspberry Pi
+
 .. code-block:: shell
 
     sudo reboot now
@@ -54,29 +58,34 @@ Furthermore it is possible to adjust the exposure and read the log.
 The source code is available here: `Github <https://github.com/pieye/nimbus-web>`_.
 
 1. Install nginx and git
+
 .. code-block:: shell
 
     sudo apt-get install nginx git
 
 
 2. Clone the code
+
 .. code-block:: shell
 
     git clone https://github.com/pieye/nimbus-web.git
 
 
 3. Edit file /etc/nginx/sites-available/default (with sudo) and change line 41 from
+
 .. code-block:: shell
 
     root /var/www/html;
 
 to
+
 .. code-block:: shell
 
     root /home/pi/nimbus-web;
 
 
 4. Restart nginx
+
 .. code-block:: shell
 
     sudo service nginx restart
@@ -104,12 +113,14 @@ It is strongly recommended to use the finished image, because the process is qui
 To use the low level c interface it is necessary to stop the nimbus-server. 
 Check with the following command if it is running and stop it. 
 For the next use of nimbus-python or nimbus-web the nimbus-server must be activated again.
+
 .. code-block:: shell
 
     sudo systemctl status nimbusServer.service
     sudo systemctl stop nimbusServer.service
 
 1. Clone `this <https://github.com/pieye/nimbus-ros>`_ Repository in the src folder of your ROS workspace.
+
 .. code-block:: shell
 
     mkdir -p ~/catkin_ws/src
@@ -118,23 +129,27 @@ For the next use of nimbus-python or nimbus-web the nimbus-server must be activa
 
 2. To perform the following installation 4GB memory is required. 
 If this is not available, the swap size must be increased accordingly:
+
 .. code-block:: shell
 
     sudo dphys-swapfile swapoff
     sudo nano /etc/dphys-swapfile
 
 3. Change these lines CONF_SWAPSIZE=3000 CONF_MAXSWAP=4096
+
 .. code-block:: shell
 
     dphys-swapfile setup
     sudo dphys-swapfile swapon
 
 4. `Install ROS Melodic from Source <http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Melodic%20on%20the%20Raspberry%20Pi>`_ manually OR run the following install script:
+
 .. code-block:: shell
 
     ./nimbus_3d_driver/scripts/install.sh
 
 5. Build the nimbus_3d_driver
+
 .. code-block:: shell
 
     cd ~/catkin_ws
@@ -154,6 +169,7 @@ Your algorithms to process the captured data can run locally on your Raspberry o
 We now configure ROS to run the master on the Raspberry and access the data via another machine running ROS Melodic with RVIZ installed
 Add this line to the .bashrc of your other machine (laptop), after adapting the IP to your Raspberry Pi if you are using Linux. 
 You also need to add the IP of your local machine (ROS_IP):
+
 .. code-block:: shell
 
     nano ~/.bashrc
@@ -162,17 +178,20 @@ You also need to add the IP of your local machine (ROS_IP):
     export ROS_IP=192.168.1.1
 
 If you are using Windows you need to set it up as an enviroment variable:
+
 .. code-block:: shell
 
     Name: ROS_MASTER_URI      Value: http://192.168.1.1:11311
     Name: ROS_IP      	  Value: 192.168.1.1
 
 SSH into your Raspberry and run:
+
 .. code-block:: shell
 
     roscore
 
 Start RVIZ on your machine:
+
 .. code-block:: shell
 
     rviz
@@ -181,6 +200,7 @@ It should start if everything works as expected.
 
 7. Start the Nimbus ROS Driver
 The given launch file starts the nimbus node and a static coordinate transform after executing it on the Raspberry.
+
 .. code-block:: shell
 
     source devel/setup.bash 
@@ -214,6 +234,7 @@ If objects are moving fast or a minimum framerate should be achieved it can help
 The desired exposure can also be adjusted.
 
 Furthermore it is possible to change the following parameters during runtime:
+
 .. code-block:: shell
 
     rosparam set /nimbus_3d_driver_node/XYZ_to_m                 [0.0 - 1.0]
