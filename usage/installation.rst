@@ -15,6 +15,7 @@ The official Raspberry OS kernel includes an implementation for the Nimbus 3D.
 To use it, the corresponding embedded sources must be installed.
 
 1. Update to bleeding edge kernel
+
 .. code-block:: shell
 
     sudo rpi-update
