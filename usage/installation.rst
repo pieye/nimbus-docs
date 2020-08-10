@@ -18,7 +18,7 @@ To use it, the corresponding embedded sources must be installed.
 
 .. code-block:: shell
 
-    sudo rpi-update
+    sudo rpi-update da3752a358a86014cdcce5fc3be5b18d7ec074c4
 
 2. Add the Nimbus 3D apt repository
 
