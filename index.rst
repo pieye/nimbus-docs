@@ -14,8 +14,8 @@ Nimbus is a 3D-TOF Raspberry Pi camera frontend and an open source software plat
    :maxdepth: 2
    :caption: Contents:
    
-   usage/installation
    usage/quickstart
+   usage/installation
    usage/embedded
    usage/network
    usage/licenses

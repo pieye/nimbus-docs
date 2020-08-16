@@ -2,13 +2,87 @@
 Quickstart
 ==========
 
+Safety instructions
+-------------------
+Follow the instructions for safe use provided by the raspberry pi foundation, see `qsg.pdf <https://static.raspberrypi.org/files/legacy/qsg.pdf>`_  
+The camera emits strong, almost invisible IR light. 
+Don't look straight into the LEDs from a short distance.
+
+Functions and features
+----------------------
+Nimbus 3D is a time of flight sensor measuring the distance between the device and  the  nearest  object/surface.  
+Nimbus  3D  illuminates  the  scene  with  a modulated infrared light source. 
+The distance is calculated by the phase shift between the illumination unit and the reflected light.
+Nimbus 3D only works with a Raspberry Pi 3B and higher, which is not part of the product.
+The measured data is available via Ethernet and canbe evaluated by the user.
+The  nimbus  3D  sensor  may  only  be  used  under  the  operating  conditions specified by the Raspberry Pi foundation,see `qsg.pdf <https://static.raspberrypi.org/files/legacy/qsg.pdf>`_  
+Nimbus 3D is designed for indoor use only.
+
+Items supplied
+--------------
+
+* | nimbus 3D
+* | safety instructions (get a copy here https://tinyurl.com/yykf6bc4)
+* | FFC jumper cable
+* | 2x spacers with screws
+
+Mounting
+--------
+The following images illustrate the mounting process of nimbus 3D. 
+The device must be powered off, while mounting the camera.
+
+.. figure:: mounting.png
+   :scale: 100 %
+   :alt: Nimbus mounting
+
+
+Operation
+---------
+Fllow these two fundamental rules in order to get optimal performance:
+* | Use a strong power supply (minimum 2.5A). The quality of onboard illumination highly depends on the supply (we recommend to use the official power supply)
+* | Use a gigabit ethernet cable (cat6 and higher)
+
+Technical data
+--------------
++-----------------------+---------------------------------------+                    
+| Resolution            | 352 x 288                             |
++-----------------------+---------------------------------------+                    
+| Measurement range     | 0,1 - 5m                              |
++-----------------------+---------------------------------------+                    
+| Viewing angle         | 66° x 54° (H x V)                     |
++-----------------------+---------------------------------------+
+| Framerate             | up to 30fps                           |
++-----------------------+---------------------------------------+              
+| Interface             | CSI2, I2C, 5V                         |
++-----------------------+---------------------------------------+
+| Output                | amplitude, radial,                    |
+|                       | confidence, point cloud               |
++-----------------------+---------------------------------------+
+| Size                  | 44mm x 56mm x 23mm                    |
++-----------------------+---------------------------------------+
+| Imager                | Infineon Real3 IRS1125A               |
++-----------------------+---------------------------------------+
+| Power supply          | Min. 2.5 A                            |
++-----------------------+---------------------------------------+
+| Network connection    | Gigabit ethernet cable cat6 or higher |
++-----------------------+---------------------------------------+
+
+Compliance information
+----------------------
+Nimbus 3D complies with the relevant provisions of the RoHS Directive for the European Union. 
+In common with all Electrical and Electronic Equipment (EEE) Nimbus 3D should not be disposed of as household waste. 
+Alternative arrangements may apply in other jurisdictions.
+
+
+
+Overview about the Nimbus Software
+==================================
+
 In general there are two ways to work with nimbus which are discussed in the following chapters:
 
 1. Working directly on the Raspberry Pi (embedded)
 2. Working on a desktop machine or edge computing hardware connected to a Raspberry Pi over the network
 
-Overview about the Nimbus Software
-----------------------------------
 
 The following graphic shows the underlying architecture of the Nimbus software.
 The imager takes the image and the Linux kernel module developed by us makes it available via Video4Linux.
