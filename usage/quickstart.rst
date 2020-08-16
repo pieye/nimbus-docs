@@ -32,15 +32,15 @@ The following images illustrate the mounting process of nimbus 3D.
 The device must be powered off, while mounting the camera.
 
 .. figure:: mounting.png
-   :scale: 75 %
+   :scale: 60 %
    :alt: Nimbus mounting
 
 
 Operation
 ---------
 Fllow these two fundamental rules in order to get optimal performance:
-* | Use a strong power supply (minimum 2.5A). The quality of onboard illumination highly depends on the supply (we recommend to use the official power supply)
-* | Use a gigabit ethernet cable (cat6 and higher)
+* Use a strong power supply (minimum 2.5A). The quality of onboard illumination highly depends on the supply (we recommend to use the official power supply)
+* Use a gigabit ethernet cable (cat6 and higher)
 
 Technical data
 --------------
