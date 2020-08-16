@@ -32,7 +32,7 @@ The following images illustrate the mounting process of nimbus 3D.
 The device must be powered off, while mounting the camera.
 
 .. figure:: mounting.png
-   :scale: 100 %
+   :scale: 75 %
    :alt: Nimbus mounting
 
 
@@ -74,7 +74,7 @@ In common with all Electrical and Electronic Equipment (EEE) Nimbus 3D should no
 Alternative arrangements may apply in other jurisdictions.
 
 
-
+==================================
 Overview about the Nimbus Software
 ==================================
 
