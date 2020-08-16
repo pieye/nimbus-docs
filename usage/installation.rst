@@ -146,7 +146,7 @@ If this is not available, the swap size must be increased accordingly:
 
 .. code-block:: shell
 
-    ./nimbus_3d_driver/scripts/install.sh
+    ./nimbus-ros/scripts/install.sh
 
 5. Build the nimbus_3d_driver
 
@@ -182,7 +182,7 @@ If you are using Windows you need to set it up as an enviroment variable:
 .. code-block:: shell
 
     Name: ROS_MASTER_URI      Value: http://192.168.1.1:11311
-    Name: ROS_IP      	  Value: 192.168.1.1
+    Name: ROS_IP      	      Value: 192.168.1.1
 
 SSH into your Raspberry and run:
 
